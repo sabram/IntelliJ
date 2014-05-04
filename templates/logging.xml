@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="logging">
+  <template name="lg" value="import org.slf4j.Logger;&#10;import org.slf4j.LoggerFactory;" description="logger imports" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="lgr" value="private static final Logger logger = LoggerFactory.getLogger($CLASS_NAME$.class);" description="logger declaration" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="lgi" value="logger.info(&quot;$END$&quot;);" description="logger.info" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="lgd" value="logger.debug(&quot;$END$&quot;);" description="logger.debug" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="lgw" value="logger.warn(&quot;$END$&quot;);" description="logger.warn" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="lge" value="logger.error(&quot;$END$&quot;);" description="logger.error" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
